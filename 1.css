@@ -1,0 +1,272 @@
+@font-face {
+    font-family: "TT Lakes Regular";
+    src: url(font/TTLakes-Regular.ttf);
+}
+
+@font-face {
+    font-family: "TT Lakes Medium";
+    src: url(font/TTLakes-Medium.ttf);
+}
+
+@font-face {
+    font-family: "TT Lakes Bold";
+    src: url(font/TTLakes-Bold.ttf);
+}
+
+body {
+    font-family: "TT Lakes Regular", serif;
+    font-size: 14px;
+    width: 320px;
+    height: 597px;
+    margin: 0;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 16px;
+    width: 320px;
+    height: 88px;
+    border-bottom: 1px solid #D9FFF5;
+}
+
+main{
+      height: 509px;
+      margin: 0;
+      padding: 0;
+}
+
+.menu{
+    list-style-type: none;
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    align-items: center;
+
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 40px;
+    margin-left: 16px;
+    margin-bottom: 24px;
+    
+    font-family: "TT Lakes Medium";
+    font-size: 16px;
+    color: #7E7E82;
+} 
+
+.menu::-webkit-scrollbar {
+    display: none;
+  }
+
+.menu__button {
+    text-wrap: nowrap;
+    align-content: center;
+    height: 36px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.menu__button--current{
+    border: 2px solid #B8FFEC;
+    border-radius: 5px; 
+}
+
+.fading {
+    position: absolute;
+    left: 297px;
+}
+
+.title {
+    font-family: "TT Lakes Bold";
+    font-weight: 700;
+    display: flex;
+    width: 304px;
+    height: 40px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.title__highlight {
+    margin-right: 12px;
+}
+
+section {
+    padding: 0;
+}
+
+section p {
+    margin: 16px;
+    margin-top: 0;
+    padding: 0;
+}
+
+.read-more {
+    font-family: "TT Lakes Medium";
+    font-size: 16px;
+    display: flex;
+    margin-left: 16px;
+    margin-bottom: 16px;
+    width: 132px;
+    height: 24px;
+}
+
+.navigation__tablet-button,
+.tablet__expanded-text,
+.desktop__expanded-text,
+.title__desktop-menu,
+.desktop-image{
+    display: none;
+}
+
+@media screen and (min-width: 768px){
+    body {
+        width: 768px;
+        height: 504px;
+        margin: 0;
+    }
+    
+    .navigation__tablet-button,
+    .tablet__expanded-text {
+    display: block;
+}
+
+    .navigation {
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        gap: 16px;
+        width: 768px;
+        height: 88px;
+        border-bottom: 1px solid #D9FFF5;
+    }
+
+    .navigation div:nth-child(1) {
+        order: -3;
+        margin-left: 16px;
+    }
+
+    .navigation div:nth-child(2) {
+        order: -1;
+        margin-right: 234px;
+    }
+
+    .navigation div:nth-child(3) {
+        order: -2;
+    }
+
+    .navigation div:nth-child(4),
+    .navigation div:nth-child(5) {
+        order: 1;
+    }
+
+    .navigation__divider {
+        margin-right: 4px;
+        margin-left: 4px;
+    }
+
+    .title {
+        margin-bottom: 32px;
+    }
+
+    .menu {
+        margin-left: 10px;
+        margin-bottom: 32px;
+    }
+
+    .fading {
+        position: absolute;
+        left: 745px;
+    }
+
+
+    section div + img{ 
+        margin-left: 5px;
+    }
+
+    section {
+        display: flex;
+        width: 720px;
+        height: 208px;
+        margin-left: 10px;
+    }
+   }
+
+@media screen and (min-width: 1120px){
+    body {
+        width: 1120px;
+        height: 535px;
+        margin: 0;
+    }
+
+    header,
+    .fading {
+        display: none;
+    }
+
+    .title__desktop-menu {
+        display: flex;
+        font-family: "TT Lakes Medium";
+        font-size: 16px;
+        color: #1B1C21;
+    }
+
+    .title__desktop-menu div {
+        align-content: center;
+        margin-left: 32px;
+    }
+
+    .title__desktop-menu div:nth-child(2n) {
+        margin-left: 8px;
+    }
+
+    .title__wrapper{
+        display: flex;
+        margin-top: 30px;
+        justify-content: space-between;
+    }
+
+    .title {
+        margin-top: 42px;
+        margin-bottom: 8px;
+    }
+
+    .title img {
+        margin-right: 30px;
+    }
+
+    .menu {
+        height: 82px;
+        margin-left: 32px;
+        overflow: unset;
+        flex-wrap: wrap;
+    }
+
+    .menu__button{
+        margin-bottom: 8px;
+    }
+
+    .tablet__expanded-text {
+        display: none;
+    }
+
+    .desktop__expanded-text {
+        display: block;
+    }
+
+    section {
+        width: 1057px;
+        height: 290px;
+    }
+
+    section div + img {
+        display: none;
+    }
+
+    .desktop-image {
+        display: block;
+    }
+
+}
